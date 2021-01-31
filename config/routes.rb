@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i(index new create show destroy) do
     resources :photos, only: %i(create)
+
+    resources :likes, only: %i(create destroy)
   end
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+# For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
